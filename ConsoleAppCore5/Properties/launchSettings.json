@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "ConsoleAppCore5": {
+      "commandName": "Project"
+    },
+    "NuevoPerfil": {
+      "commandName": "Executable",
+      "environmentVariables": {
+        "Micla": "0"
+      }
+    }
+  }
+}
