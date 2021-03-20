@@ -80,11 +80,67 @@ namespace AppWebCore31.Controllers
         //    return dictionary;
         //}
 
+        // ***************************************************************************************************************************************
+
 
         public IActionResult Privacy()
         {
             return View();
         }
+
+
+
+        public async Task<ActionResult> DetallesPar2(string Area)
+        {
+            var response = await _iService.ObtenerGeno();
+            var otra = response.Body.ObtenerIntegrantesResult.ToList<IntegrantesModel>();
+            List<PersonaModel> Per = new List<PersonaModel>();
+            foreach (var item in otra)
+            {
+                PersonaModel deUno = new PersonaModel();
+                deUno.Name = item.Apellido;
+                Per.Add(deUno);
+            }
+
+            var ordenado = Per.OrderBy(Per => Per.Name);
+            ViewData["Dato"] = Area;
+            return PartialView(ordenado);
+        }
+
+        public ActionResult DetallesPar3(List<PersonaModel> laper)
+        {
+            var ordenado = laper.OrderBy(Per => Per.Name);
+            return PartialView(ordenado);
+        }
+
+
+        public async Task<ActionResult> DetallesPar(string Area)
+        {
+
+            var response = await _iService.ObtenerGeno();
+            var otra = response.Body.ObtenerIntegrantesResult.ToList<IntegrantesModel>();
+            List<PersonaModel> Per = new List<PersonaModel>();
+            foreach (var item in otra)
+            {
+                PersonaModel deUno = new PersonaModel();
+                deUno.Name = item.Apellido;
+                Per.Add(deUno);
+            }
+            //ViewData["Dato"] = Area;
+            if (Area == "1")
+            {
+                var ordenado = Per.OrderBy(Per => Per.Name);
+                return PartialView(ordenado);
+            }
+            else
+                return PartialView(Per);
+        }
+
+
+
+
+        // ***************************************************************************************************************************************/
+
 
         public IActionResult OtraParcial()
         {

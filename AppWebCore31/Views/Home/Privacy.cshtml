@@ -18,6 +18,11 @@
             Ejecute
         </button>
     </div>
+    <div>
+        <button type="button" class="btn btn-primary" onclick="llamarVistaParcial2();" data-target="#myModal2">
+            Orden
+        </button>
+    </div>
 </div>
 
 
@@ -62,7 +67,22 @@
 
 <script>
         function llamarVistaParcial() {
-            var laURLDeLaVista = '@Url.Action("DetallesPar", "Home", new { Area = Mensaje })';
+            var laURLDeLaVista = '@Url.Action("DetallesPar3", "Home", Model)';
+            $.ajax({
+                cache: false,
+                async: true,
+                type: "GET",
+                url: laURLDeLaVista,
+                data: {},
+                success: function (response) {
+                    $('#resultado').html('');
+                    $('#resultado').html(response);
+                }
+            });
+        }
+
+        function llamarVistaParcial2() {
+            var laURLDeLaVista = '@Url.Action("DetallesPar", "Home", new { Area = "0" })';
             $.ajax({
                 cache: false,
                 async: true,
