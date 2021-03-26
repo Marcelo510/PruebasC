@@ -1,7 +1,11 @@
-﻿{
+{
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/AppWebCore31",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:54087",
       "sslPort": 44310
@@ -18,10 +22,18 @@
     "AppWebCore31": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "WS_Geno": "http://localhost/WebServicioGEN/WebService1.asmx"
+        "WS_Geno": "http://localhost/WebServicioGEN/WebService1.asmx",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    },
+    "IIS": {
+      "commandName": "IIS",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "WS_Geno": "http://localhost/WebServicioGEN/WebService1.asmx",
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
   }

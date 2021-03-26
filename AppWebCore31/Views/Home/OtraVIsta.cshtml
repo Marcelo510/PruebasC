@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "OtraVIsta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string inpdato = "";
+    string desti = "                                               ";
+}
+
+<h1>OtraVIsta</h1>
+
+<div>
+    <input type="text" name="name" value=@inpdato />
+</div>
+<div>
+    <button onclick="@dato(inpdato)">Ejecuta</button>
+</div>
+<div>
+    <input type="text" name="name" value=@desti />
+</div>
+
+
+
+
+
+
+@{ 
+    string dato(string masda)
+    {
+
+        desti = "El dato es " + masda;
+        return desti;
+    }
+}
+

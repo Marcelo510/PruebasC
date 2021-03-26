@@ -28,7 +28,27 @@ namespace AppWebCore31.Controllers
 
         }
 
-        
+        public IActionResult Inicio()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> DetalleDatosAsync()
+        {
+            var response = await _iService.ObtenerGeno();
+            var otra = response.Body.ObtenerIntegrantesResult.ToList<IntegrantesModel>();
+            return PartialView(otra);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DetalleDatosAsync(string modelo)
+        {
+            var response = await _iService.ObtenerGeno();
+            var otra = response.Body.ObtenerIntegrantesResult.ToList<IntegrantesModel>();
+            return PartialView(otra);
+        }
+
+
 
         public async Task<IActionResult> Index()
         {
@@ -88,6 +108,10 @@ namespace AppWebCore31.Controllers
             return View();
         }
 
+        public IActionResult OtraVIsta()
+        {
+            return View();
+        }
 
 
         public async Task<ActionResult> DetallesPar2(string Area)
@@ -107,12 +131,19 @@ namespace AppWebCore31.Controllers
             return PartialView(ordenado);
         }
 
+        [HttpPost]
         public ActionResult DetallesPar3(List<PersonaModel> laper)
         {
             var ordenado = laper.OrderBy(Per => Per.Name);
             return PartialView(ordenado);
         }
 
+        
+        public ActionResult TablaView()
+        {
+            
+            return View();
+        }
 
         public async Task<ActionResult> DetallesPar(string Area)
         {

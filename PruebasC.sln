@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppFW4", "WebAppFW4\WebA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppCore5", "ConsoleAppCore5\ConsoleAppCore5.csproj", "{F61C8AB6-BD0B-49AF-82B7-53DA16FE9C3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWebCore31", "AppWebCore31\AppWebCore31.csproj", "{6CD61E03-925D-4625-80C0-23689192316D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWebCore31", "AppWebCore31\AppWebCore31.csproj", "{6CD61E03-925D-4625-80C0-23689192316D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

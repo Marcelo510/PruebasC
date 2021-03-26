@@ -37,14 +37,15 @@
 
 
 <script>
-        function llamarVistaParcial() {
+    function llamarVistaParcial() {
+            var modelo = @Model;
             var laURLDeLaVista = '@Url.Action("DetallesPar3", "Home", Model)';
             $.ajax({
                 cache: false,
                 async: true,
-                type: "GET",
+                type: "POST",
                 url: laURLDeLaVista,
-                data: {},
+                data: modelo,
                 success: function (response) {
                     $('#resultado').html('');
                     $('#resultado').html(response);

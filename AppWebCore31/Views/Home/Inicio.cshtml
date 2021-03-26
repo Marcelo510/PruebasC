@@ -1,0 +1,128 @@
+﻿@model List<WSGenograma.IntegrantesModel>
+
+@{
+    ViewData["Title"] = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string valor = "tttt";
+}
+
+<h1>Inicio</h1>
+<div class="container">
+    <div>
+        <input id="txtInput" type="text" name="name" />
+    </div>
+
+    <div>
+        <button type="button" class="btn btn-primary" onclick="llamadaAjax1();" data-target="#myModal">
+            Get
+        </button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-primary" onclick="llamarVistaParcial();" data-toggle="modal" data-target="#myModal">
+        @*<button id="btnEjec" type="button" class="btn btn-primary">*@
+            Put
+        </button>
+    </div>
+</div>
+
+<div id="destino"></div>
+
+@*Modal*@
+@*<div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+     Modal content
+    <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="destino"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+<script>
+
+
+        function llamarVistaParcial() {
+            var url = '@Url.Action("DetalleDatos", "Home")';
+            var data = {@Model};
+            //var data = @Model;
+            $.post(url, data).done(
+                function (data) {
+                    $("#destino").html(data);
+                }
+            );
+
+
+        }
+
+    @*$(function () {
+        var url = '@Url.Action("DetalleDatos", "Home")';
+                var dato = $("#txtInput").va();
+                var data = "";
+        $("#btnEjec").click(function () {
+            $.post(url, data).done(
+                function (data) {
+                    $("#destino").html(data);
+                }
+            );
+        });
+    });*@
+
+
+
+
+
+    @*function llamadaAjaxEsta() {
+
+
+            $(function () {
+                var url = '@Url.Action("DetalleDatos", "Home")';
+                var dato = $("#txtInput").va();
+                var data = "";
+                $.post(url, data).done(function (data) {
+                    $("#destino").html(data);
+                });
+
+            })
+
+    });*@
+</script>
+
+<script>
+@*function llamadaAjax() {
+        const http = new XMLHttpRequest();
+        const url = '@Url.Action("DetalleDatos", "Home", new { Area = valor })';
+
+        http.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("destino").innerHTML = this.responseText;
+            }
+        }
+        http.open("POST", url);
+        http.send();
+    }*@
+
+    function llamadaAjax1() {
+        const http = new XMLHttpRequest();
+        const url = 'http://localhost/AppWebCore31/Home/DetalleDatos';
+
+        http.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("destino").innerHTML = this.responseText;
+            }
+        }
+        http.open("GET", url);
+        http.send();
+    }
+
+    //document.getElementById("btnEjec").addEventListener("click", function () {
+    //    llamadaAjaxEsta();
+    //});
+</script>

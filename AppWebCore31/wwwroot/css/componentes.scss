@@ -1,0 +1,66 @@
+label {
+    font-weight: bold;
+  }
+
+  .text {
+    margin: 8px auto;
+  }
+
+//   .errorMsg {
+//       color: $red;
+//       margin-top: 8px;
+//   }
+
+  .input-group {
+
+    input {
+      border-right: 0;
+      box-shadow: none;
+      height: 48px;
+      &:focus {
+        box-shadow: none;
+        border-color: $gray-80;
+        + span {
+          box-shadow: none;
+          border-color: inherit;
+        }
+      }
+    }
+
+    span {
+      box-shadow: none;
+      background: $snow;
+      border-left: 0;
+    }
+  }
+
+  .error {
+    input {
+      border: 1px solid $red;
+      border-right: 0;
+    }
+
+    span {
+      border-left: 0;
+      border: 1px solid $red;
+      i {
+        color: $red;
+      }
+    }
+  }
+
+  .success {
+    input {
+      border: 1px solid $green;
+      border-right: 0;
+    }
+
+    span {
+      border-left: 0;
+      border: 1px solid $green;
+      i {
+        color: $green;
+
+      }
+    }
+  }
