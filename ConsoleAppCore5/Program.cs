@@ -8,8 +8,13 @@ namespace ConsoleAppCore5
     {
         static async Task Main(string[] args)
         {
+            
+
+
             await Tareas();
             await Tareas2();
+            
+            //var duplicar = (valor) => { return valor * 2 }
         }
 
 

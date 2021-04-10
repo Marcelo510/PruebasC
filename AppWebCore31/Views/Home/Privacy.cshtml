@@ -23,6 +23,14 @@
             Orden
         </button>
     </div>
+
+
+    <div class="text-center">
+
+        <div id="load" class="spinner-border" style="display:none" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
 </div>
 
 
@@ -55,7 +63,7 @@
             </div>
             <div>
                 <div id="resultado"></div>
-            </div>
+            </div> sty
             <div>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
@@ -66,7 +74,15 @@
 
 
 <script>
-        function llamarVistaParcial() {
+    function MostrarMensaje() {
+
+    }
+
+
+    function llamarVistaParcial() {
+        document.getElementById("load").style.display = "";
+
+
             var laURLDeLaVista = '@Url.Action("DetallesPar3", "Home", Model)';
             $.ajax({
                 cache: false,
@@ -77,8 +93,10 @@
                 success: function (response) {
                     $('#resultado').html('');
                     $('#resultado').html(response);
+                    document.getElementById("load").style.display = "none";
                 }
             });
+        
         }
 
         function llamarVistaParcial2() {

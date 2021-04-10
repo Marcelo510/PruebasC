@@ -7,8 +7,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
+using System.Web.UI;
 using WSGenograma;
 using static WSGenograma.WebService1SoapClient;
 
@@ -30,6 +32,7 @@ namespace AppWebCore31.Controllers
 
         public IActionResult Inicio()
         {
+            
             return View();
         }
 
@@ -135,6 +138,19 @@ namespace AppWebCore31.Controllers
         public ActionResult DetallesPar3(List<PersonaModel> laper)
         {
             var ordenado = laper.OrderBy(Per => Per.Name);
+
+
+            string javaScript = "MostrarMensaje();";
+            //ScriptManager.registr.RegisterStartupScript(this, this.GetType(), "script", javaScript, true);
+
+
+
+
+            Thread.Sleep(4000);
+            
+
+
+
             return PartialView(ordenado);
         }
 
