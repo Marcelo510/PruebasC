@@ -1,24 +1,17 @@
-using AppWebCore31.Core;
-using AppWebCore31.Negocio;
-using AppWebCore31.Negocio.Interfaces;
-using AppWebCore31.Negocio.Servicios;
-using log4net;
-using log4net.Config;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
+using WebAppMVC5Seg.Models;
 
-namespace AppWebCore31
+namespace WebAppMVC5Seg
 {
     public class Startup
     {
@@ -32,13 +25,8 @@ namespace AppWebCore31
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            ApplicationSettings.ApplicationConfig();
-
-            services.AddSingleton<IGeno, GenoServicio>();
-
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
             services.AddControllersWithViews();
+            services.AddDbContext<CodeStackCTX>(options => options.UseSqlServer(Configuration.GetConnectionString("ConexionSQL")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,10 +42,6 @@ namespace AppWebCore31
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
-            var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
-            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -69,14 +53,8 @@ namespace AppWebCore31
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Inicio}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
-
-            //app.UseMiddleware<DemoMiddleware>();
-            //app.Run(async context =>
-            //{
-            //    await context.Response.WriteAsync("Hello World!");
-            //});
         }
     }
 }

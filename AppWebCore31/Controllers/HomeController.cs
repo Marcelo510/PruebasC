@@ -1,5 +1,8 @@
 ﻿using AppWebCore31.Models;
+using AppWebCore31.Negocio;
 using AppWebCore31.Negocio.Interfaces;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -30,9 +33,10 @@ namespace AppWebCore31.Controllers
 
         }
 
-        public IActionResult Inicio()
+        public IActionResult Inicio(IApplicationBuilder app)
         {
             
+
             return View();
         }
 
