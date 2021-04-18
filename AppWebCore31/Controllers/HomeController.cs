@@ -43,6 +43,7 @@ namespace AppWebCore31.Controllers
         public async Task<IActionResult> DetalleDatosAsync()
         {
             var response = await _iService.ObtenerGeno();
+            
             var otra = response.Body.ObtenerIntegrantesResult.ToList<IntegrantesModel>();
             return PartialView(otra);
         }
@@ -57,23 +58,79 @@ namespace AppWebCore31.Controllers
 
 
 
+        public async Task<List<IntegrantesModel>> GetResult()
+        {
+            var response = await _iService.ObtenerGeno();
+            var otra = response.Body.ObtenerIntegrantesResult.ToList<IntegrantesModel>();
+            return otra;
+
+        }
+
+
+
         public async Task<IActionResult> Index()
         {
+            IEnumerable<ObtenerIntegrantesResponse> result1;
+            IEnumerable<ObtenerIntegrantesResponse> result2;
+
+            var result1Task = GetResult();
+            var result2Task = GetResult();
+
+            await Task.WhenAll(result1Task, result2Task).ConfigureAwait(false);
+
+            //var result1 = result1Task.Result;
+            //var result2 = result2Task.Result;
+
+            //var response5 = _iService.ObtenerGeno();
+
             //WebService1SoapClient client = new WebService1SoapClient(EndpointConfiguration.WebService1Soap);
             //var result = await client.ObtenerIntegrantesAsync();
-            log.Info("Bienvenidos a nuestra demo de Log4Net");
-            
-            try
-            {
-                var response = await _iService.ObtenerGeno();
-                var otra = response.Body.ObtenerIntegrantesResult.ToList<IntegrantesModel>();
-                return View(otra);
-            }
-            catch (Exception ex)
-            {
-                //ANSESLog.Error(typeof(InicioController), ex.Message, ex);
-                return View(ex);
-            }
+            //log.Info("Bienvenidos a nuestra demo de Log4Net");
+            //ObtenerIntegrantesResponse response = new ObtenerIntegrantesResponse();
+            var final = result1Task;
+
+            var final2 = result2Task;
+
+
+            return View(result1Task);
+
+            //try
+            //{
+
+            //    var Tarea2 = new Task(() =>
+            //    {
+            //        var response = _iService.ObtenerGeno();
+                    
+            //        //Console.WriteLine("Tarea interna 1");
+            //    });
+
+
+            //    //var Tarea = new Task<ObtenerIntegrantesResponse>(() => _iService.ObtenerGeno();
+            //    //{
+            //    //    var response2 = _iService.ObtenerGeno();
+            //    //    //Console.WriteLine("Tarea interna 2");
+            //    //});
+
+            //    //Tarea2.Start();
+            //    //Tarea.Start();
+            //    //await Tarea2;
+            //    //await Tarea;
+
+            //    //var response = await _iService.ObtenerGeno();
+            //    //var response2 = await _iService.ObtenerGeno();
+            //    //var otra = response.Body.ObtenerIntegrantesResult.ToList<IntegrantesModel>();
+            //    //return View(otra);
+            //    return View();
+            //}
+            //catch (Exception ex)
+            //{
+            //    //ANSESLog.Error(typeof(InicioController), ex.Message, ex);
+            //    return View(ex);
+            //}
+        }
+
+
+        public void mapear() { 
         }
 
 

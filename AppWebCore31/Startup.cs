@@ -69,7 +69,7 @@ namespace AppWebCore31
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Inicio}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
             //app.UseMiddleware<DemoMiddleware>();
