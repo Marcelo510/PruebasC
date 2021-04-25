@@ -62,24 +62,65 @@ namespace AppWebCore31.Controllers
         {
             var response = await _iService.ObtenerGeno();
             var otra = response.Body.ObtenerIntegrantesResult.ToList<IntegrantesModel>();
+            Thread.Sleep(4000);
             return otra;
 
         }
 
-
+        public void resultadocontro()
+        {
+            decimal principle = Convert.ToDecimal(Request["txtAmount"].ToString());
+        }
 
         public async Task<IActionResult> Index()
         {
-            IEnumerable<ObtenerIntegrantesResponse> result1;
-            IEnumerable<ObtenerIntegrantesResponse> result2;
+            //var lstvalor = new 
+            //IList<Student> studentList = new List<Student>() {
+            //    new Student(){ StudentID=1, StudentName="Bill"},
+            //    new Student(){ StudentID=2, StudentName="Steve"},
+            //    new Student(){ StudentID=3, StudentName="Ram"},
+            //    new Student(){ StudentID=1, StudentName="Moin"}
+            //};
+
+
+            var dictionary = new Dictionary<int, string>
+                {
+                    { 1, "TX" },
+                    { 2, "UT" },
+                    { 3, "FL" }
+                };
+
+            //var laLista =  '"marcadores": [{"latitude": 40.416875, "longitude": -3.703308, "city": "Madrid", "description": "Puerta del Sol"},
+            //                                {"latitude": 40.417438, "longitude": -3.693363, "city": "Madrid", "description": "Paseo del Prado"}]"'
+
+
+
+            
+
+
+
+            //var userlist = "{\"ID\":1,\"Name\":\"Manas\",\"Address\":\"India\"}";
+
+            var userlist2 = "{'ID':1,'Name':'Manas','Address':'India'}";
+            var otro = userlist2.ToList();
+
+
+            List<IntegrantesModel> result1;
+            List<IntegrantesModel> result2;
 
             var result1Task = GetResult();
             var result2Task = GetResult();
 
             await Task.WhenAll(result1Task, result2Task).ConfigureAwait(false);
 
-            //var result1 = result1Task.Result;
-            //var result2 = result2Task.Result;
+            result1 = result1Task.Result;
+            result2 = result2Task.Result;
+
+            ViewData["reultado"] = result1;
+
+            return View(result2);
+
+            
 
             //var response5 = _iService.ObtenerGeno();
 
@@ -87,12 +128,12 @@ namespace AppWebCore31.Controllers
             //var result = await client.ObtenerIntegrantesAsync();
             //log.Info("Bienvenidos a nuestra demo de Log4Net");
             //ObtenerIntegrantesResponse response = new ObtenerIntegrantesResponse();
-            var final = result1Task;
-
-            var final2 = result2Task;
 
 
-            return View(result1Task);
+            //var response = await _iService.ObtenerGeno();
+            //var otra = response.Body.ObtenerIntegrantesResult.ToList<IntegrantesModel>();
+
+
 
             //try
             //{
@@ -100,7 +141,7 @@ namespace AppWebCore31.Controllers
             //    var Tarea2 = new Task(() =>
             //    {
             //        var response = _iService.ObtenerGeno();
-                    
+
             //        //Console.WriteLine("Tarea interna 1");
             //    });
 

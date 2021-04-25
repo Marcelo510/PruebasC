@@ -7,13 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WSGenograma
+namespace DirServicio
 {
     using System.Runtime.Serialization;
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="IntegrantesModel", Namespace="http://localhost")]
     public partial class IntegrantesModel : object
     {
@@ -44,11 +44,11 @@ namespace WSGenograma
         
         private int EsposaField;
         
-        private WSGenograma.PadreMadreModel[] PadreMadreField;
+        private DirServicio.PadreMadreModel[] PadreMadreField;
         
-        private WSGenograma.CiudadesModel[] Ciudades1Field;
+        private DirServicio.CiudadesModel[] Ciudades1Field;
         
-        private WSGenograma.PaisesModel[] Paises1Field;
+        private DirServicio.PaisesModel[] Paises1Field;
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
         public int Id
@@ -220,7 +220,7 @@ namespace WSGenograma
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=13)]
-        public WSGenograma.PadreMadreModel[] PadreMadre
+        public DirServicio.PadreMadreModel[] PadreMadre
         {
             get
             {
@@ -233,7 +233,7 @@ namespace WSGenograma
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=14)]
-        public WSGenograma.CiudadesModel[] Ciudades1
+        public DirServicio.CiudadesModel[] Ciudades1
         {
             get
             {
@@ -246,7 +246,7 @@ namespace WSGenograma
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=15)]
-        public WSGenograma.PaisesModel[] Paises1
+        public DirServicio.PaisesModel[] Paises1
         {
             get
             {
@@ -260,7 +260,7 @@ namespace WSGenograma
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PadreMadreModel", Namespace="http://localhost")]
     public partial class PadreMadreModel : object
     {
@@ -297,7 +297,7 @@ namespace WSGenograma
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CiudadesModel", Namespace="http://localhost")]
     public partial class CiudadesModel : object
     {
@@ -349,7 +349,7 @@ namespace WSGenograma
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PaisesModel", Namespace="http://localhost")]
     public partial class PaisesModel : object
     {
@@ -400,52 +400,49 @@ namespace WSGenograma
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://localhost", ConfigurationName="WSGenograma.WebService1Soap")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://localhost", ConfigurationName="DirServicio.WebService1Soap")]
     public interface WebService1Soap
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://localhost/ObtenerConsultaJson", ReplyAction="*")]
-        System.Threading.Tasks.Task<WSGenograma.ObtenerConsultaJsonResponse> ObtenerConsultaJsonAsync(WSGenograma.ObtenerConsultaJsonRequest request);
+        System.Threading.Tasks.Task<DirServicio.ObtenerConsultaJsonResponse> ObtenerConsultaJsonAsync(DirServicio.ObtenerConsultaJsonRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://localhost/ObtenerIntegrantesJson", ReplyAction="*")]
-        System.Threading.Tasks.Task<WSGenograma.ObtenerIntegrantesJsonResponse> ObtenerIntegrantesJsonAsync(WSGenograma.ObtenerIntegrantesJsonRequest request);
+        System.Threading.Tasks.Task<DirServicio.ObtenerIntegrantesJsonResponse> ObtenerIntegrantesJsonAsync(DirServicio.ObtenerIntegrantesJsonRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://localhost/ObtenerIntegrantes", ReplyAction="*")]
-        System.Threading.Tasks.Task<WSGenograma.ObtenerIntegrantesResponse> ObtenerIntegrantesAsync(WSGenograma.ObtenerIntegrantesRequest request);
+        System.Threading.Tasks.Task<DirServicio.ObtenerIntegrantesResponse> ObtenerIntegrantesAsync(DirServicio.ObtenerIntegrantesRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://localhost/InsertarNuevoIntegrate", ReplyAction="*")]
-        System.Threading.Tasks.Task<WSGenograma.InsertarNuevoIntegrateResponse> InsertarNuevoIntegrateAsync(WSGenograma.InsertarNuevoIntegrateRequest request);
+        System.Threading.Tasks.Task<DirServicio.InsertarNuevoIntegrateResponse> InsertarNuevoIntegrateAsync(DirServicio.InsertarNuevoIntegrateRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://localhost/ObtenerFamiliares", ReplyAction="*")]
-        System.Threading.Tasks.Task<WSGenograma.ObtenerFamiliaresResponse> ObtenerFamiliaresAsync(WSGenograma.ObtenerFamiliaresRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://localhost/ObtenerTablasAdicionales", ReplyAction="*")]
-        System.Threading.Tasks.Task<WSGenograma.ObtenerTablasAdicionalesResponse> ObtenerTablasAdicionalesAsync(WSGenograma.ObtenerTablasAdicionalesRequest request);
+        System.Threading.Tasks.Task<DirServicio.ObtenerFamiliaresResponse> ObtenerFamiliaresAsync(DirServicio.ObtenerFamiliaresRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class ObtenerConsultaJsonRequest
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerConsultaJson", Namespace="http://localhost", Order=0)]
-        public WSGenograma.ObtenerConsultaJsonRequestBody Body;
+        public DirServicio.ObtenerConsultaJsonRequestBody Body;
         
         public ObtenerConsultaJsonRequest()
         {
         }
         
-        public ObtenerConsultaJsonRequest(WSGenograma.ObtenerConsultaJsonRequestBody Body)
+        public ObtenerConsultaJsonRequest(DirServicio.ObtenerConsultaJsonRequestBody Body)
         {
             this.Body = Body;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
     public partial class ObtenerConsultaJsonRequestBody
@@ -457,27 +454,27 @@ namespace WSGenograma
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class ObtenerConsultaJsonResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerConsultaJsonResponse", Namespace="http://localhost", Order=0)]
-        public WSGenograma.ObtenerConsultaJsonResponseBody Body;
+        public DirServicio.ObtenerConsultaJsonResponseBody Body;
         
         public ObtenerConsultaJsonResponse()
         {
         }
         
-        public ObtenerConsultaJsonResponse(WSGenograma.ObtenerConsultaJsonResponseBody Body)
+        public ObtenerConsultaJsonResponse(DirServicio.ObtenerConsultaJsonResponseBody Body)
         {
             this.Body = Body;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://localhost")]
     public partial class ObtenerConsultaJsonResponseBody
@@ -497,27 +494,27 @@ namespace WSGenograma
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class ObtenerIntegrantesJsonRequest
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerIntegrantesJson", Namespace="http://localhost", Order=0)]
-        public WSGenograma.ObtenerIntegrantesJsonRequestBody Body;
+        public DirServicio.ObtenerIntegrantesJsonRequestBody Body;
         
         public ObtenerIntegrantesJsonRequest()
         {
         }
         
-        public ObtenerIntegrantesJsonRequest(WSGenograma.ObtenerIntegrantesJsonRequestBody Body)
+        public ObtenerIntegrantesJsonRequest(DirServicio.ObtenerIntegrantesJsonRequestBody Body)
         {
             this.Body = Body;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
     public partial class ObtenerIntegrantesJsonRequestBody
@@ -529,27 +526,27 @@ namespace WSGenograma
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class ObtenerIntegrantesJsonResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerIntegrantesJsonResponse", Namespace="http://localhost", Order=0)]
-        public WSGenograma.ObtenerIntegrantesJsonResponseBody Body;
+        public DirServicio.ObtenerIntegrantesJsonResponseBody Body;
         
         public ObtenerIntegrantesJsonResponse()
         {
         }
         
-        public ObtenerIntegrantesJsonResponse(WSGenograma.ObtenerIntegrantesJsonResponseBody Body)
+        public ObtenerIntegrantesJsonResponse(DirServicio.ObtenerIntegrantesJsonResponseBody Body)
         {
             this.Body = Body;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://localhost")]
     public partial class ObtenerIntegrantesJsonResponseBody
@@ -569,27 +566,27 @@ namespace WSGenograma
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class ObtenerIntegrantesRequest
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerIntegrantes", Namespace="http://localhost", Order=0)]
-        public WSGenograma.ObtenerIntegrantesRequestBody Body;
+        public DirServicio.ObtenerIntegrantesRequestBody Body;
         
         public ObtenerIntegrantesRequest()
         {
         }
         
-        public ObtenerIntegrantesRequest(WSGenograma.ObtenerIntegrantesRequestBody Body)
+        public ObtenerIntegrantesRequest(DirServicio.ObtenerIntegrantesRequestBody Body)
         {
             this.Body = Body;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
     public partial class ObtenerIntegrantesRequestBody
@@ -601,67 +598,67 @@ namespace WSGenograma
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class ObtenerIntegrantesResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerIntegrantesResponse", Namespace="http://localhost", Order=0)]
-        public WSGenograma.ObtenerIntegrantesResponseBody Body;
+        public DirServicio.ObtenerIntegrantesResponseBody Body;
         
         public ObtenerIntegrantesResponse()
         {
         }
         
-        public ObtenerIntegrantesResponse(WSGenograma.ObtenerIntegrantesResponseBody Body)
+        public ObtenerIntegrantesResponse(DirServicio.ObtenerIntegrantesResponseBody Body)
         {
             this.Body = Body;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://localhost")]
     public partial class ObtenerIntegrantesResponseBody
     {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public WSGenograma.IntegrantesModel[] ObtenerIntegrantesResult;
+        public DirServicio.IntegrantesModel[] ObtenerIntegrantesResult;
         
         public ObtenerIntegrantesResponseBody()
         {
         }
         
-        public ObtenerIntegrantesResponseBody(WSGenograma.IntegrantesModel[] ObtenerIntegrantesResult)
+        public ObtenerIntegrantesResponseBody(DirServicio.IntegrantesModel[] ObtenerIntegrantesResult)
         {
             this.ObtenerIntegrantesResult = ObtenerIntegrantesResult;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class InsertarNuevoIntegrateRequest
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarNuevoIntegrate", Namespace="http://localhost", Order=0)]
-        public WSGenograma.InsertarNuevoIntegrateRequestBody Body;
+        public DirServicio.InsertarNuevoIntegrateRequestBody Body;
         
         public InsertarNuevoIntegrateRequest()
         {
         }
         
-        public InsertarNuevoIntegrateRequest(WSGenograma.InsertarNuevoIntegrateRequestBody Body)
+        public InsertarNuevoIntegrateRequest(DirServicio.InsertarNuevoIntegrateRequestBody Body)
         {
             this.Body = Body;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://localhost")]
     public partial class InsertarNuevoIntegrateRequestBody
@@ -721,27 +718,27 @@ namespace WSGenograma
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class InsertarNuevoIntegrateResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarNuevoIntegrateResponse", Namespace="http://localhost", Order=0)]
-        public WSGenograma.InsertarNuevoIntegrateResponseBody Body;
+        public DirServicio.InsertarNuevoIntegrateResponseBody Body;
         
         public InsertarNuevoIntegrateResponse()
         {
         }
         
-        public InsertarNuevoIntegrateResponse(WSGenograma.InsertarNuevoIntegrateResponseBody Body)
+        public InsertarNuevoIntegrateResponse(DirServicio.InsertarNuevoIntegrateResponseBody Body)
         {
             this.Body = Body;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://localhost")]
     public partial class InsertarNuevoIntegrateResponseBody
@@ -761,27 +758,27 @@ namespace WSGenograma
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class ObtenerFamiliaresRequest
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerFamiliares", Namespace="http://localhost", Order=0)]
-        public WSGenograma.ObtenerFamiliaresRequestBody Body;
+        public DirServicio.ObtenerFamiliaresRequestBody Body;
         
         public ObtenerFamiliaresRequest()
         {
         }
         
-        public ObtenerFamiliaresRequest(WSGenograma.ObtenerFamiliaresRequestBody Body)
+        public ObtenerFamiliaresRequest(DirServicio.ObtenerFamiliaresRequestBody Body)
         {
             this.Body = Body;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
     public partial class ObtenerFamiliaresRequestBody
@@ -793,27 +790,27 @@ namespace WSGenograma
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class ObtenerFamiliaresResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerFamiliaresResponse", Namespace="http://localhost", Order=0)]
-        public WSGenograma.ObtenerFamiliaresResponseBody Body;
+        public DirServicio.ObtenerFamiliaresResponseBody Body;
         
         public ObtenerFamiliaresResponse()
         {
         }
         
-        public ObtenerFamiliaresResponse(WSGenograma.ObtenerFamiliaresResponseBody Body)
+        public ObtenerFamiliaresResponse(DirServicio.ObtenerFamiliaresResponseBody Body)
         {
             this.Body = Body;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://localhost")]
     public partial class ObtenerFamiliaresResponseBody
@@ -832,86 +829,14 @@ namespace WSGenograma
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ObtenerTablasAdicionalesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerTablasAdicionales", Namespace="http://localhost", Order=0)]
-        public WSGenograma.ObtenerTablasAdicionalesRequestBody Body;
-        
-        public ObtenerTablasAdicionalesRequest()
-        {
-        }
-        
-        public ObtenerTablasAdicionalesRequest(WSGenograma.ObtenerTablasAdicionalesRequestBody Body)
-        {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class ObtenerTablasAdicionalesRequestBody
-    {
-        
-        public ObtenerTablasAdicionalesRequestBody()
-        {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ObtenerTablasAdicionalesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerTablasAdicionalesResponse", Namespace="http://localhost", Order=0)]
-        public WSGenograma.ObtenerTablasAdicionalesResponseBody Body;
-        
-        public ObtenerTablasAdicionalesResponse()
-        {
-        }
-        
-        public ObtenerTablasAdicionalesResponse(WSGenograma.ObtenerTablasAdicionalesResponseBody Body)
-        {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://localhost")]
-    public partial class ObtenerTablasAdicionalesResponseBody
-    {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string ObtenerTablasAdicionalesResult;
-        
-        public ObtenerTablasAdicionalesResponseBody()
-        {
-        }
-        
-        public ObtenerTablasAdicionalesResponseBody(string ObtenerTablasAdicionalesResult)
-        {
-            this.ObtenerTablasAdicionalesResult = ObtenerTablasAdicionalesResult;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    public interface WebService1SoapChannel : WSGenograma.WebService1Soap, System.ServiceModel.IClientChannel
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
+    public interface WebService1SoapChannel : DirServicio.WebService1Soap, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    public partial class WebService1SoapClient : System.ServiceModel.ClientBase<WSGenograma.WebService1Soap>, WSGenograma.WebService1Soap
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.0")]
+    public partial class WebService1SoapClient : System.ServiceModel.ClientBase<DirServicio.WebService1Soap>, DirServicio.WebService1Soap
     {
         
         /// <summary>
@@ -948,54 +873,54 @@ namespace WSGenograma
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WSGenograma.ObtenerConsultaJsonResponse> WSGenograma.WebService1Soap.ObtenerConsultaJsonAsync(WSGenograma.ObtenerConsultaJsonRequest request)
+        System.Threading.Tasks.Task<DirServicio.ObtenerConsultaJsonResponse> DirServicio.WebService1Soap.ObtenerConsultaJsonAsync(DirServicio.ObtenerConsultaJsonRequest request)
         {
             return base.Channel.ObtenerConsultaJsonAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WSGenograma.ObtenerConsultaJsonResponse> ObtenerConsultaJsonAsync()
+        public System.Threading.Tasks.Task<DirServicio.ObtenerConsultaJsonResponse> ObtenerConsultaJsonAsync()
         {
-            WSGenograma.ObtenerConsultaJsonRequest inValue = new WSGenograma.ObtenerConsultaJsonRequest();
-            inValue.Body = new WSGenograma.ObtenerConsultaJsonRequestBody();
-            return ((WSGenograma.WebService1Soap)(this)).ObtenerConsultaJsonAsync(inValue);
+            DirServicio.ObtenerConsultaJsonRequest inValue = new DirServicio.ObtenerConsultaJsonRequest();
+            inValue.Body = new DirServicio.ObtenerConsultaJsonRequestBody();
+            return ((DirServicio.WebService1Soap)(this)).ObtenerConsultaJsonAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WSGenograma.ObtenerIntegrantesJsonResponse> WSGenograma.WebService1Soap.ObtenerIntegrantesJsonAsync(WSGenograma.ObtenerIntegrantesJsonRequest request)
+        System.Threading.Tasks.Task<DirServicio.ObtenerIntegrantesJsonResponse> DirServicio.WebService1Soap.ObtenerIntegrantesJsonAsync(DirServicio.ObtenerIntegrantesJsonRequest request)
         {
             return base.Channel.ObtenerIntegrantesJsonAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WSGenograma.ObtenerIntegrantesJsonResponse> ObtenerIntegrantesJsonAsync()
+        public System.Threading.Tasks.Task<DirServicio.ObtenerIntegrantesJsonResponse> ObtenerIntegrantesJsonAsync()
         {
-            WSGenograma.ObtenerIntegrantesJsonRequest inValue = new WSGenograma.ObtenerIntegrantesJsonRequest();
-            inValue.Body = new WSGenograma.ObtenerIntegrantesJsonRequestBody();
-            return ((WSGenograma.WebService1Soap)(this)).ObtenerIntegrantesJsonAsync(inValue);
+            DirServicio.ObtenerIntegrantesJsonRequest inValue = new DirServicio.ObtenerIntegrantesJsonRequest();
+            inValue.Body = new DirServicio.ObtenerIntegrantesJsonRequestBody();
+            return ((DirServicio.WebService1Soap)(this)).ObtenerIntegrantesJsonAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WSGenograma.ObtenerIntegrantesResponse> WSGenograma.WebService1Soap.ObtenerIntegrantesAsync(WSGenograma.ObtenerIntegrantesRequest request)
+        System.Threading.Tasks.Task<DirServicio.ObtenerIntegrantesResponse> DirServicio.WebService1Soap.ObtenerIntegrantesAsync(DirServicio.ObtenerIntegrantesRequest request)
         {
             return base.Channel.ObtenerIntegrantesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WSGenograma.ObtenerIntegrantesResponse> ObtenerIntegrantesAsync()
+        public System.Threading.Tasks.Task<DirServicio.ObtenerIntegrantesResponse> ObtenerIntegrantesAsync()
         {
-            WSGenograma.ObtenerIntegrantesRequest inValue = new WSGenograma.ObtenerIntegrantesRequest();
-            inValue.Body = new WSGenograma.ObtenerIntegrantesRequestBody();
-            return ((WSGenograma.WebService1Soap)(this)).ObtenerIntegrantesAsync(inValue);
+            DirServicio.ObtenerIntegrantesRequest inValue = new DirServicio.ObtenerIntegrantesRequest();
+            inValue.Body = new DirServicio.ObtenerIntegrantesRequestBody();
+            return ((DirServicio.WebService1Soap)(this)).ObtenerIntegrantesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WSGenograma.InsertarNuevoIntegrateResponse> WSGenograma.WebService1Soap.InsertarNuevoIntegrateAsync(WSGenograma.InsertarNuevoIntegrateRequest request)
+        System.Threading.Tasks.Task<DirServicio.InsertarNuevoIntegrateResponse> DirServicio.WebService1Soap.InsertarNuevoIntegrateAsync(DirServicio.InsertarNuevoIntegrateRequest request)
         {
             return base.Channel.InsertarNuevoIntegrateAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WSGenograma.InsertarNuevoIntegrateResponse> InsertarNuevoIntegrateAsync(string nombre, string nommedio, string apellido, string sexo, System.DateTime fnacim, int ciudadnac, int nacionalidad, int padre, int madre, int esposo, int esposa)
+        public System.Threading.Tasks.Task<DirServicio.InsertarNuevoIntegrateResponse> InsertarNuevoIntegrateAsync(string nombre, string nommedio, string apellido, string sexo, System.DateTime fnacim, int ciudadnac, int nacionalidad, int padre, int madre, int esposo, int esposa)
         {
-            WSGenograma.InsertarNuevoIntegrateRequest inValue = new WSGenograma.InsertarNuevoIntegrateRequest();
-            inValue.Body = new WSGenograma.InsertarNuevoIntegrateRequestBody();
+            DirServicio.InsertarNuevoIntegrateRequest inValue = new DirServicio.InsertarNuevoIntegrateRequest();
+            inValue.Body = new DirServicio.InsertarNuevoIntegrateRequestBody();
             inValue.Body.nombre = nombre;
             inValue.Body.nommedio = nommedio;
             inValue.Body.apellido = apellido;
@@ -1007,33 +932,20 @@ namespace WSGenograma
             inValue.Body.madre = madre;
             inValue.Body.esposo = esposo;
             inValue.Body.esposa = esposa;
-            return ((WSGenograma.WebService1Soap)(this)).InsertarNuevoIntegrateAsync(inValue);
+            return ((DirServicio.WebService1Soap)(this)).InsertarNuevoIntegrateAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WSGenograma.ObtenerFamiliaresResponse> WSGenograma.WebService1Soap.ObtenerFamiliaresAsync(WSGenograma.ObtenerFamiliaresRequest request)
+        System.Threading.Tasks.Task<DirServicio.ObtenerFamiliaresResponse> DirServicio.WebService1Soap.ObtenerFamiliaresAsync(DirServicio.ObtenerFamiliaresRequest request)
         {
             return base.Channel.ObtenerFamiliaresAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WSGenograma.ObtenerFamiliaresResponse> ObtenerFamiliaresAsync()
+        public System.Threading.Tasks.Task<DirServicio.ObtenerFamiliaresResponse> ObtenerFamiliaresAsync()
         {
-            WSGenograma.ObtenerFamiliaresRequest inValue = new WSGenograma.ObtenerFamiliaresRequest();
-            inValue.Body = new WSGenograma.ObtenerFamiliaresRequestBody();
-            return ((WSGenograma.WebService1Soap)(this)).ObtenerFamiliaresAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WSGenograma.ObtenerTablasAdicionalesResponse> WSGenograma.WebService1Soap.ObtenerTablasAdicionalesAsync(WSGenograma.ObtenerTablasAdicionalesRequest request)
-        {
-            return base.Channel.ObtenerTablasAdicionalesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WSGenograma.ObtenerTablasAdicionalesResponse> ObtenerTablasAdicionalesAsync()
-        {
-            WSGenograma.ObtenerTablasAdicionalesRequest inValue = new WSGenograma.ObtenerTablasAdicionalesRequest();
-            inValue.Body = new WSGenograma.ObtenerTablasAdicionalesRequestBody();
-            return ((WSGenograma.WebService1Soap)(this)).ObtenerTablasAdicionalesAsync(inValue);
+            DirServicio.ObtenerFamiliaresRequest inValue = new DirServicio.ObtenerFamiliaresRequest();
+            inValue.Body = new DirServicio.ObtenerFamiliaresRequestBody();
+            return ((DirServicio.WebService1Soap)(this)).ObtenerFamiliaresAsync(inValue);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
@@ -1077,11 +989,11 @@ namespace WSGenograma
         {
             if ((endpointConfiguration == EndpointConfiguration.WebService1Soap))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost/WebServicioGEN/WebService1.asmx");
+                return new System.ServiceModel.EndpointAddress("http://localhost/GenoServicio/webservice1.asmx");
             }
             if ((endpointConfiguration == EndpointConfiguration.WebService1Soap12))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost/WebServicioGEN/WebService1.asmx");
+                return new System.ServiceModel.EndpointAddress("http://localhost/GenoServicio/webservice1.asmx");
             }
             throw new System.InvalidOperationException(string.Format("No se pudo encontrar un punto de conexión con el nombre \"{0}\".", endpointConfiguration));
         }

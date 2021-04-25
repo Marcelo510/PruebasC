@@ -18,9 +18,9 @@ namespace AppWebCore31.Negocio.Servicios
         }
         
 
-        public Task<WSGenograma.ObtenerIntegrantesResponse> ObtenerGeno()
+        public Task<ObtenerIntegrantesResponse> ObtenerGeno()
         {
-            Task<WSGenograma.ObtenerIntegrantesResponse> response;
+            Task<ObtenerIntegrantesResponse> response;
 
             try
             {
