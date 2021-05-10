@@ -1,0 +1,71 @@
+﻿@model List<PersonaModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Vista Ajax JS</h1>
+
+<div>
+    <form action="ParcialAjax2" method="post">
+
+        @foreach (var item in Model)
+        {
+            <div>@item.Name</div>
+            <div>@item.Edad</div>
+        }
+
+
+        @*<div>
+            <button type="submit">Ejecutar</button>
+        </div>*@
+    </form>
+
+    <div>
+        <button onclick="llamadaJavaScript()">FueraForm</button>
+    </div>
+
+    @*<div>
+        <button onclick="@Url.Action("ParcialAjax2", "Ajax")">FueraForm</button>
+    </div>*@
+
+    <div id="destino">
+
+    </div>
+
+</div>
+
+
+<script>
+
+    function llamadaJavaScript(eldato) {
+
+        
+
+        const http = new XMLHttpRequest();
+
+        const url = '@Url.Action("ParcialAjax2", "Ajax", Model)';
+
+
+
+        http.onreadystatechange = function () {
+
+            if (this.readyState == 4 && this.status == 200) {
+
+                document.getElementById("destino").innerHTML = this.responseText;
+
+            }
+
+        }
+
+        http.open("POST", url, true);
+
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+
+        http.send();
+
+    }
+</script>
+
+
+

@@ -7,16 +7,31 @@ namespace ConsoleApp5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
-            dynamic a = "Marcelo";
-            dynamic b = "otro";
+            var text = "HelloMediumReader";
+            var number = new[] { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+            Console.WriteLine(text[5]);
+            Console.WriteLine(number[number.Length - 2]);
 
-            a = 1;
+
+
+
             
-            Console.WriteLine(a + b);
+
+            
+        }
 
 
+        public void dispose()
+        {
+            string path = @"c:\texto.txt";
+
+            using (writer writer = new(path))
+            {
+                writer.write("jfjf");
+
+            }
+            var writer2 = new writer(path);
 
         }
 
@@ -27,12 +42,6 @@ namespace ConsoleApp5
                 (1, "Marcelo"),
                 (2, "Alonso")
             };
-
-
-            
-
-
-
         }
     }
 }

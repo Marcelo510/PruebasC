@@ -8,5 +8,6 @@ namespace AppWebCore31.Models
     public class PersonaModel
     {
         public string Name { get; set; }
+        public int Edad { get; set; }
     }
 }
