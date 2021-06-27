@@ -6,8 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.GData.Client" Version="2.2.0" />
+    <PackageReference Include="Google.GData.Contacts" Version="2.2.0" />
+    <PackageReference Include="Google.GData.Extensions" Version="2.2.0" />
     <PackageReference Include="NUnit" Version="3.13.2" />
     <PackageReference Include="System.Collections" Version="4.3.0" />
+    <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />
   </ItemGroup>
 
 </Project>

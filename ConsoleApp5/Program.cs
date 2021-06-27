@@ -8,17 +8,21 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
 
-            var text = "HelloMediumReader";
-            var number = new[] { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-            Console.WriteLine(text[5]);
-            Console.WriteLine(number[number.Length - 2]);
+            var obten = GMail.GetContacts("marceloakd0@gmail.com", "achernar1990");
 
 
 
 
             
-
             
+            
+            //var ver = new { field = 2 };
+            //Console.WriteLine(ver.field);
+
+            //var text = "HelloMediumReader";
+            //var number = new[] { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+            //Console.WriteLine(text[5]);
+            //Console.WriteLine(number[number.Length - 2]);
         }
 
 
