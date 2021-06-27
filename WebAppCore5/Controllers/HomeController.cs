@@ -23,6 +23,39 @@ namespace WebAppCore5.Controllers
             return View();
         }
 
+        public IActionResult FilterList()
+        {
+            List<DatosListas> listaPalabras = new List<DatosListas>();
+
+            listaPalabras.Add(new DatosListas() { Nombre = "Marcelo" });
+            listaPalabras.Add(new DatosListas() { Nombre = "Armando" });
+            listaPalabras.Add(new DatosListas() { Nombre = "Alonso" });
+
+
+            ViewBag.data = listaPalabras;
+            return View();
+        }
+
+        public IActionResult TextDropBuscador()
+        {
+            List<DatosListas> listaPalabras = new List<DatosListas>();
+            
+            listaPalabras.Add(new DatosListas() { Nombre= "Marcelo"});
+            listaPalabras.Add(new DatosListas() { Nombre = "Armando" });
+            listaPalabras.Add(new DatosListas() { Nombre = "Alonso" });
+
+
+            ViewBag.data = listaPalabras;
+
+
+
+
+
+
+
+            return View(listaPalabras);
+        }
+
         public IActionResult Privacy()
         {
             return View();
