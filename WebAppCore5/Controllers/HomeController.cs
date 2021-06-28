@@ -27,9 +27,20 @@ namespace WebAppCore5.Controllers
         {
             List<DatosListas> listaPalabras = new List<DatosListas>();
 
-            listaPalabras.Add(new DatosListas() { Nombre = "Marcelo" });
-            listaPalabras.Add(new DatosListas() { Nombre = "Armando" });
-            listaPalabras.Add(new DatosListas() { Nombre = "Alonso" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 1, Nombre = "Marcelo" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 2, Nombre = "Armando" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 3, Nombre = "Alonso" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 4, Nombre = "Marcelo2" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 5, Nombre = "Armando2" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 6, Nombre = "Alonso2" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 7, Nombre = "Marcelo" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 8, Nombre = "Armando" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 9, Nombre = "Alonso" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 10, Nombre = "Marcelo" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 11, Nombre = "Armando" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 12, Nombre = "Alonso" });
+
+
 
 
             ViewBag.data = listaPalabras;
@@ -43,6 +54,15 @@ namespace WebAppCore5.Controllers
             listaPalabras.Add(new DatosListas() { Nombre= "Marcelo"});
             listaPalabras.Add(new DatosListas() { Nombre = "Armando" });
             listaPalabras.Add(new DatosListas() { Nombre = "Alonso" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 4, Nombre = "Marcelo2" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 5, Nombre = "Armando2" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 6, Nombre = "Alonso2" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 7, Nombre = "Marcelo" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 8, Nombre = "Armando" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 9, Nombre = "Alonso" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 10, Nombre = "Marcelo" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 11, Nombre = "Armando" });
+            listaPalabras.Add(new DatosListas() { IdNombre = 12, Nombre = "Alonso" });
 
 
             ViewBag.data = listaPalabras;

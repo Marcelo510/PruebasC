@@ -2,20 +2,48 @@
 
 
 @{
+    string datofin = "";
     ViewData["Title"] = "TextDropBuscador";
 }
 
 <h1>TextDropBuscador</h1>
 
 <div>
-    <input type="text" placeholder="Filtre por datos" autocomplete="off" />
-    <br />
-    <select multiple>
+    <input class="form-control" type="text" placeholder="Filtre por datos" autocomplete="off" />
+    <select class="form-control" id="list" multiple>
         @foreach (var item in Model)
         {
-            <option value="@item.Nombre">@item.Nombre</option>
+            <option value="@item.IdNombre">@item.Nombre</option>
         }
     </select>
+
+
+    <label id="elcodigo" />
+</div>
+
+
+<div>
+    <select class="mdb-select md-form" searchable="Search here..">
+        <option value="" disabled selected>Choose your country</option>
+        <option value="1">USA</option>
+        <option value="2">Germany</option>
+        <option value="3">France</option>
+        <option value="3">Poland</option>
+        <option value="3">Japan</option>
+    </select>
+</div>
+<div>
+
+</div>
+
+<div>
+    <datalist id="busquedas">
+        @foreach (var item in Model)
+        {
+            <option>@item.Nombre</option>
+        }
+    </datalist>
+    <input class="form-control" autoComplete="on" list="busquedas" />
 </div>
 
 
@@ -30,6 +58,7 @@
                 const regex = new RegExp(search, 'gi');
                 return option.text.match(regex);
             });
+            
         }
 
         function filterOptions() {
@@ -39,10 +68,23 @@
             });
             const matchArray = findMatches(this.value, options);
             select[0].append(...matchArray);
+            
         }
+
+        function getSelectValue() {
+            var selectedValue = document.getElementById("list").value;
+            document.getElementById('elcodigo').innerText = selectedValue;
+        }
+
 
         input.addEventListener('change', filterOptions);
         input.addEventListener('keyup', filterOptions);
+        
     })();
+
+
+    $(document).ready(function () {
+        $('.mdb-select').materialSelect();
+    });
 </script>
 
