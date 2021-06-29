@@ -46,6 +46,15 @@
     <input class="form-control" autoComplete="on" list="busquedas" />
 </div>
 
+<form action="TextDropBuscador" method="post">
+
+    <button type="submit">ElSUBMITY</button>
+
+    @Html.ActionLink("ButtonText", "TextDropBuscador1", "Home",new { data = 1 }) 
+</form>
+<button asp-action="TextDropBuscador" onclick="TextDropBuscador">Elboton</button>   
+    
+
 
 <script>
     (function () {

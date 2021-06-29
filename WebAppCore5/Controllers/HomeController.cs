@@ -64,17 +64,21 @@ namespace WebAppCore5.Controllers
             listaPalabras.Add(new DatosListas() { IdNombre = 11, Nombre = "Armando" });
             listaPalabras.Add(new DatosListas() { IdNombre = 12, Nombre = "Alonso" });
 
-
             ViewBag.data = listaPalabras;
-
-
-
-
-
-
 
             return View(listaPalabras);
         }
+
+        
+        public IActionResult TextDropBuscador1(string a)
+        {
+            List<DatosListas> listaPalabras = new List<DatosListas>();
+
+            var ver = ViewData["Dato"];
+            return View(listaPalabras);
+        }
+
+
 
         public IActionResult Privacy()
         {
