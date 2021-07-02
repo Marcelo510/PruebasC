@@ -1,21 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace ConsoleApp5
 {
     class Program
     {
         static void Main(string[] args)
         {
+            List<int> numbers = new List<int>() { 1, 2, 3, 4, 5 };
+            RecorreArreglo.While(numbers);
+            Console.WriteLine("-------------------");
+            RecorreArreglo.DoWhile(numbers);
+            Console.WriteLine("-------------------");
+            RecorreArreglo.For(numbers);
+            Console.WriteLine("-------------------");
+            RecorreArreglo.ForEach(numbers);
+            Console.WriteLine("-------------------");
+            RecorreArreglo.ForEachObject(numbers);
+            Console.WriteLine("-------------------");
+            RecorreArreglo.MetodoForEach(numbers);
+            Console.WriteLine("----Recursiva---------------");
+            RecorreArreglo.Recursiva(numbers);
+            Console.WriteLine("----Action------------------");
+            RecorreArreglo.Action(numbers);
+            Console.WriteLine("----Return Action-----------");
+            Action Executor = RecorreArreglo.ReturnAction(numbers);
+            Executor();
 
-            var obten = GMail.GetContacts("marceloakd0@gmail.com", "achernar1990");
+
+            Console.ReadLine();
 
 
 
+            //var obten = GMail.GetContacts("marceloakd0@gmail.com", "achernar1990");
 
-            
-            
-            
             //var ver = new { field = 2 };
             //Console.WriteLine(ver.field);
 
