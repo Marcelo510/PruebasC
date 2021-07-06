@@ -70,7 +70,7 @@ namespace WebAppCore5.Controllers
         }
 
         
-        public IActionResult TextDropBuscador1(string a)
+        public IActionResult TextDropBuscador1(string data)
         {
             List<DatosListas> listaPalabras = new List<DatosListas>();
 

@@ -19,6 +19,11 @@
 
 
     <label id="elcodigo" />
+    <a class="btn btn-primary btn-lg" href='javascript:;' onclick="getSelectValue();" role="button">
+        texto_boton &raquo;
+    </a>
+
+    <button onclick="getSelectValue();">Get Selected</button>
 </div>
 
 
@@ -80,10 +85,7 @@
             
         }
 
-        function getSelectValue() {
-            var selectedValue = document.getElementById("list").value;
-            document.getElementById('elcodigo').innerText = selectedValue;
-        }
+        
 
 
         input.addEventListener('change', filterOptions);
@@ -92,8 +94,10 @@
     })();
 
 
-    $(document).ready(function () {
-        $('.mdb-select').materialSelect();
-    });
+    function getSelectValue() {
+        var selectedValue = document.getElementById("list").value;
+        document.getElementById('elcodigo').innerText = selectedValue;
+        console.log(selectedValue);
+    }
 </script>
 

@@ -8,8 +8,12 @@ namespace ConsoleAppCore5
     {
         static async Task Main(string[] args)
         {
-            await Tareas();
-            await Tareas2();
+
+            TaskAsyncColeccion taskAsyncColeccion = new();
+            
+            
+            //await Tareas();
+            //await Tareas2();
         }
 
 
