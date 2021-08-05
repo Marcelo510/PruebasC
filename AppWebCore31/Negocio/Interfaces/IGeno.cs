@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppWebCore31.Negocio.Interfaces
 {
-    public interface IGeno
+    public interface IGeno : IDisposable
     {
         Task<WSGenograma.ObtenerIntegrantesResponse> ObtenerGeno();
     }

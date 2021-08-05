@@ -1,9 +1,6 @@
-﻿using AppWebCore31.Models;
-using AppWebCore31.Negocio.Interfaces;
+﻿using AppWebCore31.Negocio.Interfaces;
 using Microsoft.AspNetCore.Http;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using WSGenograma;
 
@@ -16,7 +13,12 @@ namespace AppWebCore31.Negocio.Servicios
         {
             _httpContextAccessor = httpContextAccessor;
         }
-        
+
+        public void Dispose()
+        {
+            
+            throw new NotImplementedException();
+        }
 
         public Task<WSGenograma.ObtenerIntegrantesResponse> ObtenerGeno()
         {
@@ -29,8 +31,8 @@ namespace AppWebCore31.Negocio.Servicios
                 //SoapClient.Endpoint.EndpointBehaviors.Add(new InspectorBehavior(_httpContextAccessor));
                 response = SoapClient.ObtenerIntegrantesAsync();
 
-                
-                
+
+
             }
             catch (Exception ex)
             {
@@ -40,5 +42,9 @@ namespace AppWebCore31.Negocio.Servicios
 
             return response;
         }
+
+        //public void dispo
+
+
     }
 }
