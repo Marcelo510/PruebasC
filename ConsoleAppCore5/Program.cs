@@ -50,18 +50,21 @@ namespace ConsoleAppCore5
             lst.Add(Task.Run(() => Tareas()));
             lst.Add(Task.Run(() => Tareas2()));
 
-            Task oTask = Task.WhenAll(lst);
-            oTask.Wait();
+            await Task.WhenAll(lst);
 
-            try
-            {
-                oTask.Wait();
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
+            //Task oTask = Task.WhenAll(lst);
+            //oTask.Wait();
+
+            //try
+            //{
+            //    oTask.Wait();
+            //}
+            //catch (Exception)
+            //{
+
+            //    throw;
+            //}
 
 
             //await Tareas();
