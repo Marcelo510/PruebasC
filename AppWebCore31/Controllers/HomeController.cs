@@ -34,19 +34,20 @@ namespace AppWebCore31.Controllers
         {
             //WebService1SoapClient client = new WebService1SoapClient(EndpointConfiguration.WebService1Soap);
             //var result = await client.ObtenerIntegrantesAsync();
-            log.Info("Bienvenidos a nuestra demo de Log4Net");
+            //log.Info("Bienvenidos a nuestra demo de Log4Net");
             
-            try
-            {
-                var response = await _iService.ObtenerGeno();
-                var otra = response.Body.ObtenerIntegrantesResult.ToList<IntegrantesModel>();
-                return View(otra);
-            }
-            catch (Exception ex)
-            {
-                //ANSESLog.Error(typeof(InicioController), ex.Message, ex);
-                return View(ex);
-            }
+            //try
+            //{
+            //    var response = await _iService.ObtenerGeno();
+            //    var otra = response.Body.ObtenerIntegrantesResult.ToList<IntegrantesModel>();
+            //    return View(otra);
+            //}
+            //catch (Exception ex)
+            //{
+            //    //ANSESLog.Error(typeof(InicioController), ex.Message, ex);
+            //    return View(ex);
+            //}
+            return View();
         }
 
 
