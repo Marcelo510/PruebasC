@@ -1,0 +1,23 @@
+﻿@{
+	ViewData["Title"] = "PaginaWeb";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	var lapagi = ViewData["Pagina"];
+
+	string Mensaje = "e";
+}
+
+<h1>PaginaWeb</h1>
+
+<div>
+	<button type="button" class="btn btn-primary" onclick="llamarVistaParcialPagina();" data-target="#myModal2">
+		La llamada a la pagina
+	</button>
+</div>
+
+
+
+<script>
+    function llamarVistaParcialPagina() {
+        console.log(@lapagi;)
+    }
+</script>
